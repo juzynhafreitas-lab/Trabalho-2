@@ -1,0 +1,682 @@
+
+/* =========================================
+   ESSÊNCIA ELEGANTE
+   PERFUMARIA PREMIUM
+   ARQUIVO: estilo.css
+========================================= */
+
+
+/* =========================================
+   1. CONFIGURAÇÕES GERAIS
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #faf9f6;
+    color: #292720;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================================
+   2. CABEÇALHO
+========================================= */
+
+header {
+    background-color: #171613;
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px 22px;
+    border-bottom: 2px solid #b99a62;
+}
+
+.logo h1 {
+    color: #d8bd87;
+    font-size: 36px;
+    font-weight: normal;
+    letter-spacing: 7px;
+}
+
+.logo p {
+    color: #bdb6a8;
+    font-size: 12px;
+    letter-spacing: 5px;
+    margin-top: 3px;
+}
+
+
+/* MENU DE NAVEGAÇÃO */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 42px;
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid #49443a;
+}
+
+nav a {
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #d8bd87;
+}
+
+
+/* =========================================
+   3. CONTEÚDO PRINCIPAL
+========================================= */
+
+main {
+    width: 90%;
+    max-width: 1250px;
+    margin: 45px auto;
+}
+
+section {
+    margin-bottom: 85px;
+}
+
+
+/* =========================================
+   4. BANNER PRINCIPAL
+========================================= */
+
+.banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: #201e19;
+    color: #ffffff;
+    min-height: 460px;
+    overflow: hidden;
+}
+
+.banner-conteudo {
+    padding: 55px;
+}
+
+.subtitulo {
+    color: #ad905d;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.banner h2 {
+    font-size: 43px;
+    line-height: 1.25;
+    color: #e1c99a;
+    font-weight: normal;
+    margin-bottom: 22px;
+}
+
+.banner-conteudo > p:not(.subtitulo) {
+    color: #d1cbc0;
+    margin-bottom: 35px;
+}
+
+.botao-banner {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #b99a62;
+    color: #171613;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.botao-banner:hover {
+    background-color: #e2c895;
+}
+
+
+/* IMAGEM DO BANNER */
+
+.banner-imagem {
+    height: 100%;
+    min-height: 460px;
+}
+
+.banner-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 460px;
+    object-fit: cover;
+}
+
+
+/* =========================================
+   5. DIFERENCIAIS DA LOJA
+========================================= */
+
+.diferenciais {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    text-align: center;
+    padding: 35px 15px;
+    border-bottom: 1px solid #e2d9c8;
+}
+
+.diferenciais div {
+    padding: 15px;
+}
+
+.diferenciais span {
+    color: #ad905d;
+    font-size: 34px;
+}
+
+.diferenciais h3 {
+    color: #3a3429;
+    font-size: 21px;
+    margin: 8px 0;
+}
+
+.diferenciais p {
+    color: #77716a;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   6. TÍTULOS DAS SEÇÕES
+========================================= */
+
+.titulo-secao {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.titulo-secao h2 {
+    color: #302a20;
+    font-size: 34px;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+.titulo-secao > p:last-child {
+    color: #77716a;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   7. VITRINE DE PRODUTOS
+========================================= */
+
+.produtos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+}
+
+.produto {
+    background-color: #ffffff;
+    border: 1px solid #e9e2d6;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+
+/* IMAGENS DOS PRODUTOS */
+
+.imagem-produto {
+    position: relative;
+    overflow: hidden;
+}
+
+.imagem-produto img {
+    display: block;
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    transition: transform 0.5s;
+}
+
+.produto:hover .imagem-produto img {
+    transform: scale(1.05);
+}
+
+
+/* ETIQUETAS */
+
+.etiqueta {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #b99a62;
+    color: #171613;
+    padding: 6px 12px;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+
+/* INFORMAÇÕES DOS PRODUTOS */
+
+.produto-info {
+    padding: 25px;
+    text-align: center;
+}
+
+.categoria {
+    color: #a58b5c;
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.produto h3 {
+    color: #302a20;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 10px 0;
+}
+
+.descricao {
+    color: #77716a;
+    font-size: 15px;
+    min-height: 55px;
+}
+
+.produto strong {
+    display: block;
+    font-size: 25px;
+    color: #302a20;
+    margin: 18px 0;
+}
+
+
+/* BOTÃO DE COMPRA */
+
+.botao-produto {
+    display: block;
+    background-color: #211f1b;
+    color: #ffffff;
+    padding: 13px;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.botao-produto:hover {
+    background-color: #b99a62;
+    color: #171613;
+}
+
+
+/* =========================================
+   8. SOBRE A LOJA
+========================================= */
+
+.sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    background-color: #f0ede6;
+    padding: 40px;
+}
+
+
+/* IMAGEM SOBRE */
+
+.sobre-imagem img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+}
+
+
+/* TEXTO SOBRE */
+
+.sobre-conteudo h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    font-weight: normal;
+    color: #302a20;
+    margin-bottom: 20px;
+}
+
+.sobre-conteudo p:not(.subtitulo) {
+    color: #686158;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+
+/* =========================================
+   9. FORMULÁRIO DE COMPRA
+========================================= */
+
+.pedido {
+    max-width: 850px;
+    margin: 0 auto 85px;
+}
+
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border: 1px solid #e4dac8;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* GRUPOS DO FORMULÁRIO */
+
+fieldset {
+    border: 1px solid #d9c8a7;
+    padding: 25px;
+    margin-bottom: 28px;
+    border-radius: 4px;
+}
+
+legend {
+    color: #927344;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 0 12px;
+}
+
+
+/* RÓTULOS */
+
+label {
+    display: block;
+    color: #39342c;
+    font-size: 17px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+
+/* CAMPOS DE TEXTO */
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 8px;
+    border: 1px solid #d8d2c8;
+    border-radius: 4px;
+    background-color: #fdfcf9;
+    color: #29251f;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+}
+
+
+/* TEXTO DOS PLACEHOLDERS */
+
+input::placeholder,
+textarea::placeholder {
+    color: #89847b;
+}
+
+
+/* RADIO E CHECKBOX */
+
+.opcao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: normal;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    accent-color: #a5864e;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+
+/* OBSERVAÇÕES */
+
+.orientacao {
+    color: #77716a;
+    font-size: 15px;
+    margin-bottom: 12px;
+}
+
+.aviso {
+    color: #77716a;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================================
+   10. ACESSIBILIDADE E FOCO
+========================================= */
+
+/* DESTAQUE AO NAVEGAR COM A TECLA TAB */
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: 4px solid #bd963f;
+    outline-offset: 3px;
+}
+
+/* FOCO NOS LINKS */
+
+a:focus {
+    outline: 3px solid #bd963f;
+    outline-offset: 5px;
+}
+
+
+/* =========================================
+   11. BOTÃO FINALIZAR PEDIDO
+========================================= */
+
+button {
+    width: 100%;
+    padding: 18px;
+    background-color: #a5864e;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #756039;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   12. RODAPÉ
+========================================= */
+
+footer {
+    background-color: #171613;
+    color: #d7d0c4;
+    text-align: center;
+    padding: 45px 20px;
+    border-top: 2px solid #b99a62;
+}
+
+.footer-logo h2 {
+    color: #d8bd87;
+    font-size: 27px;
+    font-weight: normal;
+    letter-spacing: 5px;
+}
+
+.footer-logo p {
+    color: #bdb6a8;
+    font-size: 11px;
+    letter-spacing: 4px;
+}
+
+footer > p {
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.linha-footer {
+    width: 80%;
+    max-width: 500px;
+    height: 1px;
+    background-color: #62553d;
+    margin: 25px auto;
+}
+
+footer .copyright {
+    color: #a8a196;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   13. RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .banner {
+        grid-template-columns: 1fr;
+    }
+
+    .banner-imagem {
+        min-height: 300px;
+    }
+
+    .banner-imagem img {
+        min-height: 300px;
+        max-height: 380px;
+    }
+
+    .produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sobre {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+
+    body {
+        font-size: 18px;
+    }
+
+    main {
+        width: 94%;
+        margin: 25px auto;
+    }
+
+    .logo h1 {
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .banner-conteudo {
+        padding: 30px 22px;
+    }
+
+    .banner h2 {
+        font-size: 31px;
+    }
+
+    .diferenciais {
+        grid-template-columns: 1fr;
+    }
+
+    .produtos {
+        grid-template-columns: 1fr;
+    }
+
+    .titulo-secao h2 {
+        font-size: 28px;
+    }
+
+    .sobre {
+        padding: 20px;
+        gap: 25px;
+    }
+
+    .sobre-imagem img {
+        height: 260px;
+    }
+
+    .sobre-conteudo h2 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 20px;
+    }
+
+    fieldset {
+        padding: 15px;
+    }
+
+    .footer-logo h2 {
+        font-size: 21px;
+    }
+
+}
+
+
+
